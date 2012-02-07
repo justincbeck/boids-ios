@@ -11,9 +11,9 @@
 
 // HelloWorld implementation
 @implementation AvoidTouchScene
-@synthesize _flockPointer;
-@synthesize _sheet;
-@synthesize _currentTouch;
+@synthesize flockPointer = _flockPointer;
+@synthesize  sheet = _sheet;
+@synthesize currentTouch = _currentTouch;
 +(id) scene
 {
 	// 'scene' is an autorelease object.
@@ -43,9 +43,9 @@
 		CGRect boidRect = CGRectMake(0,0, 32, 32);
 		
 		
-		self._sheet = [CCSpriteBatchNode batchNodeWithFile:@"blocks.png" capacity:201];
+		self.sheet = [CCSpriteBatchNode batchNodeWithFile:@"blocks.png" capacity:201];
 		self.isTouchEnabled = YES;
-		self._currentTouch = CGPointZero;
+		self.currentTouch = CGPointZero;
 		[_sheet setBlendFunc:(ccBlendFunc){GL_ONE, GL_ONE}];
 		[self addChild:_sheet z:0 tag:0];
 		
@@ -118,7 +118,7 @@
 		
 		// Avoid touch
 		if ( CGPointEqualToPoint( _currentTouch, CGPointZero ) == NO )
-			[b flee:self._currentTouch panicAtDistance:75 usingMultiplier:0.95f];
+			[b flee:self.currentTouch panicAtDistance:75 usingMultiplier:0.95f];
 		
 		// swarm around middle of screen
 		[b seek:centerOfScreen usingMultiplier:0.45f];
@@ -128,17 +128,17 @@
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
-	self._currentTouch = [self convertTouchToNodeSpace: touch];
+	self.currentTouch = [self convertTouchToNodeSpace: touch];
 	return YES;
 }
 // touch updates:
 - (void)ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event
 {
-	self._currentTouch = [self convertTouchToNodeSpace: touch];
+	self.currentTouch = [self convertTouchToNodeSpace: touch];
 }
 - (void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event
 {
-	self._currentTouch = CGPointZero;
+	self.currentTouch = CGPointZero;
 }
 
 // on "dealloc" you need to release all your retained objects

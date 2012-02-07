@@ -6,7 +6,6 @@
 //  Copyright __MyCompanyName__ 2010. All rights reserved.
 //
 
-
 // When you import this file, you import all the cocos2d classes
 #import "cocos2d.h"
 #import "Boid.h"
@@ -20,9 +19,10 @@
 	CGPoint _currentTouch;
 }
 
-@property(nonatomic, retain) Boid* _flockPointer;
-@property(nonatomic, assign) CCSpriteBatchNode* _sheet;
-@property(nonatomic, assign) CGPoint _currentTouch;
+@property(nonatomic, retain) Boid* flockPointer;
+@property(nonatomic, assign) CCSpriteBatchNode* sheet;
+@property(nonatomic, assign) CGPoint currentTouch;
+
 // returns a Scene that contains the HelloWorld as the only child
 +(id) scene;
 -(void) tick: (ccTime) dt;

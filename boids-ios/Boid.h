@@ -41,10 +41,12 @@
 
 @interface Boid : CCSprite
 {
+    
 @protected
 	float	_maxForce;
 	float	_maxSpeed;
 	int		_edgeBehavior;
+    
 @public	
 	float	_maxForceSQ;
 	float	_maxSpeedSQ;
@@ -67,12 +69,15 @@
 	
 	Boid*	_next;
 }
+
 // When these are set via accessor (self.property), we will set the squared version of these values at the same time
 @property(nonatomic, assign) float	maxForce;
 @property(nonatomic, assign) float	maxSpeed;
 @property(nonatomic, assign) bool	doRotation;
+
 // Check type
 @property(nonatomic, assign) int	edgeBehavior;
+
 /*
  * Randomizes all properties of a boid
  */
@@ -82,11 +87,13 @@
 /*
  * Sets the random walk properties
  */
+
 -(void) setWanderingRadius:(float)radius lookAheadDistance:(float)distance andMaxTurningAngle:(float)turningAngle;
 /**
  * Resets the Boid's position, velocity, acceleration and 
  * current steering force to zero
  */
+
 -(void) resetVectorsToZero;
 -(void) setPos:(CGPoint)value;
 
@@ -101,6 +108,7 @@
  */
 -(void) update;
 -(void) handleBorder;
+
 /**
  * Applies a braking force to the boid by scaling it's 
  * velocity.
@@ -108,6 +116,7 @@
  * A number between 0 and 1. 0 = no effect
  */
 -(void) brake:(float)brakingForce;
+
 /**
  * Seeks the Boid towards the specified target
  * 
@@ -125,8 +134,10 @@
  * below 1.0
  */
 -(void) seek:(CGPoint)target usingMultiplier:(float)multiplier;
+
 // Same as above but only if within a specific range to the target
 -(void) seek:(CGPoint)target withinRange:(float)range usingMultiplier:(float)multiplier;
+
 /**
  * Seeks the Boid towards the specified target and 
  * applies a deceleration force as the Boid arrives
@@ -150,6 +161,7 @@
  * below 1.0
  */
 -(void) arrive:(CGPoint)target withEaseDistance:(float)easeDistance usingMultiplier:(float)multiplier;
+
 /**
  * If a target is within a certain range of the Boid, as 
  * specified by the panicDistance parameter, the Boid will 
@@ -192,6 +204,7 @@
  */
 -(void) wander:(float)multiplier;
 -(CGPoint) steer:(CGPoint)target easeAsApproaching:(BOOL)ease withEaseDistance:(float)easeDistance;
+
 /**
  * Use this method to simulate flocking movement in a 
  * group of Boids. Flock will combine the separate, 

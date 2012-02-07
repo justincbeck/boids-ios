@@ -23,11 +23,12 @@
 	float incriment;
 }
 
-@property(nonatomic, retain) Boid *_flockPointer;
-@property(nonatomic, retain) Boid *_obstaclesPointer;
+@property(nonatomic, retain) Boid *flockPointer;
+@property(nonatomic, retain) Boid *obstaclesPointer;
 
-@property(nonatomic, assign) CCSpriteBatchNode* _sheet;
-@property(nonatomic, assign) CGPoint _currentTouch;
+@property(nonatomic, assign) CCSpriteBatchNode* sheet;
+@property(nonatomic, assign) CGPoint currentTouch;
+
 // returns a Scene that contains the HelloWorld as the only child
 +(id) scene;
 -(void) tick: (ccTime) dt;

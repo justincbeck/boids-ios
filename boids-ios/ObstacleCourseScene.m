@@ -11,11 +11,12 @@
 
 // HelloWorld implementation
 @implementation ObstacleCourseScene
-@synthesize _flockPointer;
-@synthesize _obstaclesPointer;
+@synthesize flockPointer = _flockPointer;
+@synthesize obstaclesPointer = _obstaclesPointer;
 
-@synthesize _sheet;
-@synthesize _currentTouch;
+@synthesize sheet = _sheet;
+@synthesize currentTouch = _currentTouch;
+
 +(id) scene
 {
 	// 'scene' is an autorelease object.
@@ -41,9 +42,9 @@
 		srandom(time(NULL));
 		
 		//[self setColor: ccc3(128, 128, 128)]
-		self._sheet = [CCSpriteBatchNode batchNodeWithFile:@"blocks.png" capacity:201];
+		self.sheet = [CCSpriteBatchNode batchNodeWithFile:@"blocks.png" capacity:201];
 		self.isTouchEnabled = YES;
-		self._currentTouch = CGPointZero;
+		self.currentTouch = CGPointZero;
 		
 		[_sheet setBlendFunc:(ccBlendFunc){GL_ONE, GL_ONE}];
 		[self addChild:_sheet z:0 tag:0];
@@ -162,7 +163,7 @@
 		//[b wander: 0.45f];
 		
 		// Go to where the user is touching, OR go to the center of the screen other wise but care less about getting there
-		if ( CGPointEqualToPoint( _currentTouch, CGPointZero ) == NO ) [b seek:self._currentTouch usingMultiplier:0.35f]; // go towards touch
+		if ( CGPointEqualToPoint( _currentTouch, CGPointZero ) == NO ) [b seek:self.currentTouch usingMultiplier:0.35f]; // go towards touch
 	//	else [b seek:CGPointOfInterest usingMultiplier:0.25f]; // go towards center of screen
 		
 		// Flock
@@ -192,17 +193,17 @@
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
-	self._currentTouch = [self convertTouchToNodeSpace: touch];
+	self.currentTouch = [self convertTouchToNodeSpace: touch];
 	return YES;
 }
 // touch updates:
 - (void)ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event
 {
-	self._currentTouch = [self convertTouchToNodeSpace: touch];
+	self.currentTouch = [self convertTouchToNodeSpace: touch];
 }
 - (void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event
 {
-	self._currentTouch = CGPointZero;
+	self.currentTouch = CGPointZero;
 }
 
 // on "dealloc" you need to release all your retained objects

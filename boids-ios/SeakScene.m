@@ -11,9 +11,10 @@
 
 // HelloWorld implementation
 @implementation SeakScene
-@synthesize _flockPointer;
-@synthesize _sheet;
-@synthesize _currentTouch;
+@synthesize flockPointer = _flockPointer;
+@synthesize sheet = _sheet;
+@synthesize currentTouch = _currentTouch;
+
 +(id) scene
 {
 	// 'scene' is an autorelease object.
@@ -43,10 +44,10 @@
 		CGRect boidRect = CGRectMake(0,0, 32, 32);
 		
 		
-		self._sheet = [CCSpriteBatchNode batchNodeWithFile:@"blocks.png" capacity:201];
+		self.sheet = [CCSpriteBatchNode batchNodeWithFile:@"blocks.png" capacity:201];
 		[_sheet setBlendFunc:(ccBlendFunc){GL_ONE, GL_ONE}];
 		self.isTouchEnabled = YES;
-		self._currentTouch = CGPointZero;
+		self.currentTouch = CGPointZero;
 		
 		[self addChild:_sheet z:0 tag:0];
 		
@@ -116,7 +117,7 @@
 		
 		// go towards touch
 		if ( CGPointEqualToPoint( _currentTouch, CGPointZero ) == NO ) {
-			[b arrive:self._currentTouch withEaseDistance:45 usingMultiplier:0.6f]; 
+			[b arrive:self.currentTouch withEaseDistance:45 usingMultiplier:0.6f]; 
 			[b wander:0.2f];
 		}
 		
@@ -126,17 +127,17 @@
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
-	self._currentTouch = [self convertTouchToNodeSpace: touch];
+	self.currentTouch = [self convertTouchToNodeSpace: touch];
 	return YES;
 }
 // touch updates:
 - (void)ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event
 {
-	self._currentTouch = [self convertTouchToNodeSpace: touch];
+	self.currentTouch = [self convertTouchToNodeSpace: touch];
 }
 - (void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event
 {
-	self._currentTouch = CGPointZero;
+	self.currentTouch = CGPointZero;
 }
 
 // on "dealloc" you need to release all your retained objects
