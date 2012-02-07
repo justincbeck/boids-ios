@@ -119,17 +119,14 @@
 		984661AD14E159FF003044E4 /* ZAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 984661AC14E159FF003044E4 /* ZAttributedString.m */; };
 		984661B114E159FF003044E4 /* ZFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 984661B014E159FF003044E4 /* ZFont.m */; };
 		984661B614E159FF003044E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 984661B514E159FF003044E4 /* main.m */; };
-		984661B914E159FF003044E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 984661B814E159FF003044E4 /* AppDelegate.m */; };
-		984661BC14E159FF003044E4 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 984661BB14E159FF003044E4 /* RootViewController.m */; };
-		984661BF14E159FF003044E4 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 984661BE14E159FF003044E4 /* HelloWorldLayer.m */; };
-		984661D514E15B65003044E4 /* AvoidTouchScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 984661CA14E15B65003044E4 /* AvoidTouchScene.m */; };
-		984661D614E15B65003044E4 /* Boid.m in Sources */ = {isa = PBXBuildFile; fileRef = 984661CC14E15B65003044E4 /* Boid.m */; };
-		984661D714E15B65003044E4 /* BoidsExampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 984661CE14E15B65003044E4 /* BoidsExampleAppDelegate.m */; };
-		984661D814E15B65003044E4 /* FlockScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 984661D014E15B65003044E4 /* FlockScene.m */; };
-		984661D914E15B65003044E4 /* ObstacleCourseScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 984661D214E15B65003044E4 /* ObstacleCourseScene.m */; };
-		984661DA14E15B65003044E4 /* SeakScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 984661D414E15B65003044E4 /* SeakScene.m */; };
 		984661E114E16296003044E4 /* blocks.png in Resources */ = {isa = PBXBuildFile; fileRef = 984661DF14E16295003044E4 /* blocks.png */; };
 		984661E214E16296003044E4 /* boid.png in Resources */ = {isa = PBXBuildFile; fileRef = 984661E014E16295003044E4 /* boid.png */; };
+		984661EF14E16494003044E4 /* AvoidTouchScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 984661E414E16493003044E4 /* AvoidTouchScene.m */; };
+		984661F014E16494003044E4 /* Boid.m in Sources */ = {isa = PBXBuildFile; fileRef = 984661E614E16493003044E4 /* Boid.m */; };
+		984661F114E16494003044E4 /* BoidsExampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 984661E814E16493003044E4 /* BoidsExampleAppDelegate.m */; };
+		984661F214E16494003044E4 /* FlockScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 984661EA14E16493003044E4 /* FlockScene.m */; };
+		984661F314E16494003044E4 /* ObstacleCourseScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 984661EC14E16493003044E4 /* ObstacleCourseScene.m */; };
+		984661F414E16494003044E4 /* SeakScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 984661EE14E16493003044E4 /* SeakScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -361,27 +358,20 @@
 		984661B214E159FF003044E4 /* LICENSE_FontLabel.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE_FontLabel.txt; path = libs/LICENSE_FontLabel.txt; sourceTree = "<group>"; };
 		984661B414E159FF003044E4 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		984661B514E159FF003044E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		984661B714E159FF003044E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		984661B814E159FF003044E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		984661BA14E159FF003044E4 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		984661BB14E159FF003044E4 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		984661BD14E159FF003044E4 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		984661BE14E159FF003044E4 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
-		984661C014E159FF003044E4 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
-		984661C914E15B65003044E4 /* AvoidTouchScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AvoidTouchScene.h; path = Classes/AvoidTouchScene.h; sourceTree = "<group>"; };
-		984661CA14E15B65003044E4 /* AvoidTouchScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AvoidTouchScene.m; path = Classes/AvoidTouchScene.m; sourceTree = "<group>"; };
-		984661CB14E15B65003044E4 /* Boid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Boid.h; path = Classes/Boid.h; sourceTree = "<group>"; };
-		984661CC14E15B65003044E4 /* Boid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Boid.m; path = Classes/Boid.m; sourceTree = "<group>"; };
-		984661CD14E15B65003044E4 /* BoidsExampleAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BoidsExampleAppDelegate.h; path = Classes/BoidsExampleAppDelegate.h; sourceTree = "<group>"; };
-		984661CE14E15B65003044E4 /* BoidsExampleAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BoidsExampleAppDelegate.m; path = Classes/BoidsExampleAppDelegate.m; sourceTree = "<group>"; };
-		984661CF14E15B65003044E4 /* FlockScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlockScene.h; path = Classes/FlockScene.h; sourceTree = "<group>"; };
-		984661D014E15B65003044E4 /* FlockScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlockScene.m; path = Classes/FlockScene.m; sourceTree = "<group>"; };
-		984661D114E15B65003044E4 /* ObstacleCourseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObstacleCourseScene.h; path = Classes/ObstacleCourseScene.h; sourceTree = "<group>"; };
-		984661D214E15B65003044E4 /* ObstacleCourseScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObstacleCourseScene.m; path = Classes/ObstacleCourseScene.m; sourceTree = "<group>"; };
-		984661D314E15B65003044E4 /* SeakScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SeakScene.h; path = Classes/SeakScene.h; sourceTree = "<group>"; };
-		984661D414E15B65003044E4 /* SeakScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SeakScene.m; path = Classes/SeakScene.m; sourceTree = "<group>"; };
 		984661DF14E16295003044E4 /* blocks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blocks.png; path = Resources/blocks.png; sourceTree = "<group>"; };
 		984661E014E16295003044E4 /* boid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boid.png; path = Resources/boid.png; sourceTree = "<group>"; };
+		984661E314E16493003044E4 /* AvoidTouchScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvoidTouchScene.h; sourceTree = "<group>"; };
+		984661E414E16493003044E4 /* AvoidTouchScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvoidTouchScene.m; sourceTree = "<group>"; };
+		984661E514E16493003044E4 /* Boid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Boid.h; sourceTree = "<group>"; };
+		984661E614E16493003044E4 /* Boid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Boid.m; sourceTree = "<group>"; };
+		984661E714E16493003044E4 /* BoidsExampleAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoidsExampleAppDelegate.h; sourceTree = "<group>"; };
+		984661E814E16493003044E4 /* BoidsExampleAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoidsExampleAppDelegate.m; sourceTree = "<group>"; };
+		984661E914E16493003044E4 /* FlockScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlockScene.h; sourceTree = "<group>"; };
+		984661EA14E16493003044E4 /* FlockScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlockScene.m; sourceTree = "<group>"; };
+		984661EB14E16493003044E4 /* ObstacleCourseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObstacleCourseScene.h; sourceTree = "<group>"; };
+		984661EC14E16493003044E4 /* ObstacleCourseScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObstacleCourseScene.m; sourceTree = "<group>"; };
+		984661ED14E16493003044E4 /* SeakScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeakScene.h; sourceTree = "<group>"; };
+		984661EE14E16493003044E4 /* SeakScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeakScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -406,18 +396,6 @@
 		9846604614E159FD003044E4 = {
 			isa = PBXGroup;
 			children = (
-				984661C914E15B65003044E4 /* AvoidTouchScene.h */,
-				984661CA14E15B65003044E4 /* AvoidTouchScene.m */,
-				984661CB14E15B65003044E4 /* Boid.h */,
-				984661CC14E15B65003044E4 /* Boid.m */,
-				984661CD14E15B65003044E4 /* BoidsExampleAppDelegate.h */,
-				984661CE14E15B65003044E4 /* BoidsExampleAppDelegate.m */,
-				984661CF14E15B65003044E4 /* FlockScene.h */,
-				984661D014E15B65003044E4 /* FlockScene.m */,
-				984661D114E15B65003044E4 /* ObstacleCourseScene.h */,
-				984661D214E15B65003044E4 /* ObstacleCourseScene.m */,
-				984661D314E15B65003044E4 /* SeakScene.h */,
-				984661D414E15B65003044E4 /* SeakScene.m */,
 				9846606514E159FD003044E4 /* boids-ios */,
 				9846605414E159FD003044E4 /* Frameworks */,
 				9846605214E159FD003044E4 /* Products */,
@@ -450,13 +428,18 @@
 		9846606514E159FD003044E4 /* boids-ios */ = {
 			isa = PBXGroup;
 			children = (
-				984661B714E159FF003044E4 /* AppDelegate.h */,
-				984661B814E159FF003044E4 /* AppDelegate.m */,
-				984661BA14E159FF003044E4 /* RootViewController.h */,
-				984661BB14E159FF003044E4 /* RootViewController.m */,
-				984661BD14E159FF003044E4 /* HelloWorldLayer.h */,
-				984661BE14E159FF003044E4 /* HelloWorldLayer.m */,
-				984661C014E159FF003044E4 /* GameConfig.h */,
+				984661E314E16493003044E4 /* AvoidTouchScene.h */,
+				984661E414E16493003044E4 /* AvoidTouchScene.m */,
+				984661E514E16493003044E4 /* Boid.h */,
+				984661E614E16493003044E4 /* Boid.m */,
+				984661E714E16493003044E4 /* BoidsExampleAppDelegate.h */,
+				984661E814E16493003044E4 /* BoidsExampleAppDelegate.m */,
+				984661E914E16493003044E4 /* FlockScene.h */,
+				984661EA14E16493003044E4 /* FlockScene.m */,
+				984661EB14E16493003044E4 /* ObstacleCourseScene.h */,
+				984661EC14E16493003044E4 /* ObstacleCourseScene.m */,
+				984661ED14E16493003044E4 /* SeakScene.h */,
+				984661EE14E16493003044E4 /* SeakScene.m */,
 				9846606614E159FD003044E4 /* Resources */,
 				9846607A14E159FD003044E4 /* libs */,
 				984661B314E159FF003044E4 /* Supporting Files */,
@@ -961,15 +944,12 @@
 				984661AD14E159FF003044E4 /* ZAttributedString.m in Sources */,
 				984661B114E159FF003044E4 /* ZFont.m in Sources */,
 				984661B614E159FF003044E4 /* main.m in Sources */,
-				984661B914E159FF003044E4 /* AppDelegate.m in Sources */,
-				984661BC14E159FF003044E4 /* RootViewController.m in Sources */,
-				984661BF14E159FF003044E4 /* HelloWorldLayer.m in Sources */,
-				984661D514E15B65003044E4 /* AvoidTouchScene.m in Sources */,
-				984661D614E15B65003044E4 /* Boid.m in Sources */,
-				984661D714E15B65003044E4 /* BoidsExampleAppDelegate.m in Sources */,
-				984661D814E15B65003044E4 /* FlockScene.m in Sources */,
-				984661D914E15B65003044E4 /* ObstacleCourseScene.m in Sources */,
-				984661DA14E15B65003044E4 /* SeakScene.m in Sources */,
+				984661EF14E16494003044E4 /* AvoidTouchScene.m in Sources */,
+				984661F014E16494003044E4 /* Boid.m in Sources */,
+				984661F114E16494003044E4 /* BoidsExampleAppDelegate.m in Sources */,
+				984661F214E16494003044E4 /* FlockScene.m in Sources */,
+				984661F314E16494003044E4 /* ObstacleCourseScene.m in Sources */,
+				984661F414E16494003044E4 /* SeakScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
