@@ -75,7 +75,7 @@
 			// You want the flock to behavior basically the same, but have a TINY variation among members
 
 			//[boid setSpeedMax: 2.0f andSteeringForceMax:1.0f];			
-			[boid setSpeedMax: 2.2f withRandomRangeOf:0.15f andSteeringForceMax:1.0f withRandomRangeOf:0.15f];
+			[boid setSpeedMax: 2.8f withRandomRangeOf:0.15f andSteeringForceMax:1.0f withRandomRangeOf:0.15f];
 			[boid setWanderingRadius: 16.0f lookAheadDistance: 40.0f andMaxTurningAngle:0.2f];
 			[boid setEdgeBehavior: CCRANDOM_0_1() < 0.9 ? EDGE_WRAP : EDGE_BOUNCE];
 			

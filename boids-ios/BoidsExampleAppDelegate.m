@@ -42,7 +42,7 @@
 	[director setDeviceOrientation:kCCDeviceOrientationLandscapeLeft];
 	
 	// Turn on display FPS
-	[director setDisplayFPS:NO];
+	[director setDisplayFPS:YES];
 	
 	// Turn on multiple touches
 	EAGLView *view = [director openGLView];
@@ -53,25 +53,25 @@
 	// You can change anytime.
 	[CCTexture2D setDefaultAlphaPixelFormat:kTexture2DPixelFormat_RGBA8888];	
 	
-	int randomDemo = CCRANDOM_0_1() * 4;
-	randomDemo = 0;
-	switch (randomDemo)
-	{
-		case 0:
+//	int randomDemo = CCRANDOM_0_1() * 4;
+//	randomDemo = 0;
+//	switch (randomDemo)
+//	{
+//		case 0:
 			[[CCDirector sharedDirector] runWithScene: [FlockScene scene]];
-			break;
-		case 1:
-			[[CCDirector sharedDirector] runWithScene: [SeakScene scene]];
-			break;
-		case 2:
-			[[CCDirector sharedDirector] runWithScene: [AvoidTouchScene scene]];
-			break;
-		case 3:
-			[[CCDirector sharedDirector] runWithScene: [ObstacleCourseScene scene]];
-			break;	
-		default:
-			break;
-	}
+//			break;
+//		case 1:
+//			[[CCDirector sharedDirector] runWithScene: [SeakScene scene]];
+//			break;
+//		case 2:
+//			[[CCDirector sharedDirector] runWithScene: [AvoidTouchScene scene]];
+//			break;
+//		case 3:
+//			[[CCDirector sharedDirector] runWithScene: [ObstacleCourseScene scene]];
+//			break;	
+//		default:
+//			break;
+//	}
 }
 
 
