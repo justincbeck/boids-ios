@@ -181,7 +181,11 @@
 #pragma mark Behaviors
 -(void) seek:(CGPoint)target usingMultiplier:(float)multiplier
 {
-	_steeringForce = [self steer:target easeAsApproaching:NO withEaseDistance:IGNORE];
+    CGPoint planePoint = CGPointMake(target.x, _oldInternalPosition.y);
+
+    // JCB - I want to target a direction rather than a point
+//	_steeringForce = [self steer:target easeAsApproaching:NO withEaseDistance:IGNORE];
+	_steeringForce = [self steer:planePoint easeAsApproaching:NO withEaseDistance:IGNORE];
 	
 	if(multiplier != IGNORE)
 		_steeringForce = ccpMult(_steeringForce, multiplier);
@@ -199,7 +203,11 @@
 		return;
 	}
 	
-	_steeringForce = [self steer:target easeAsApproaching:NO withEaseDistance:IGNORE];
+    CGPoint planePoint = CGPointMake(target.x, _oldInternalPosition.y);
+    
+    // JCB - I want to target a direction rather than a point
+    //	_steeringForce = [self steer:target easeAsApproaching:NO withEaseDistance:IGNORE];
+	_steeringForce = [self steer:planePoint easeAsApproaching:NO withEaseDistance:IGNORE];
 	
 	// Pass in zero to ignore mutliplier, is this faster than just doing the operation? I dunno
 	if(multiplier != IGNORE)

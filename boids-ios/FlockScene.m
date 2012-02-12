@@ -77,7 +77,9 @@
 			//[boid setSpeedMax: 2.0f andSteeringForceMax:1.0f];			
 			[boid setSpeedMax: 2.8f withRandomRangeOf:0.15f andSteeringForceMax:1.0f withRandomRangeOf:0.15f];
 			[boid setWanderingRadius: 16.0f lookAheadDistance: 40.0f andMaxTurningAngle:0.2f];
-			[boid setEdgeBehavior: CCRANDOM_0_1() < 0.9 ? EDGE_WRAP : EDGE_BOUNCE];
+            // JCB - I don't want any edge bounce
+//			[boid setEdgeBehavior: CCRANDOM_0_1() < 0.9 ? EDGE_WRAP : EDGE_BOUNCE];
+			[boid setEdgeBehavior: EDGE_WRAP];
 			
 			// Cocos properties
 			[boid setScale: 1.0];
@@ -119,9 +121,12 @@
 		// Uncomment one of these to get user interaction
 		if ( CGPointEqualToPoint( _currentTouch, CGPointZero ) == NO )
 		{
-			//[b flee: self._currentTouch panicAtDistance:35 usingMultiplier:0.25f]; // avoid touch
-			[b seek:self._currentTouch withinRange:75 usingMultiplier:0.05f]; // go towards touch
+			[b flee: self._currentTouch panicAtDistance:50 usingMultiplier:0.25f]; // avoid touch
+//			[b seek:self._currentTouch withinRange:75 usingMultiplier:0.5f]; // go towards touch
 		}
+
+        // JCB - Forcing left to right flow of all boids
+        [b seek:CGPointMake(480.0f, 160.0f) withinRange:160 usingMultiplier:0.5f];
 		
 		[b 
 		 flock:_flockPointer
